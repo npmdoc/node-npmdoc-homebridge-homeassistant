@@ -1,0 +1,2123 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/home-assistant/homebridge-homeassistant#readme"
+
+    >homebridge-homeassistant (v2.0.7)</a>
+</h1>
+<h4>Homebridge plugin for Home Assistant: https://home-assistant.io</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant">module homebridge-homeassistant</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.homebridge-homeassistant">
+            function <span class="apidocSignatureSpan"></span>homebridge-homeassistant
+            <span class="apidocSignatureSpan">(homebridge)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.binary_sensor">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>binary_sensor
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.cover">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>cover
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.device_tracker">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>device_tracker
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.fan">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>fan
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.light">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>light
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.lock">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>lock
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.media_player">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>media_player
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform
+            <span class="apidocSignatureSpan">(log, config, api)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.accessories">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.accessories
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.callService">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.callService
+            <span class="apidocSignatureSpan">(domain, service, serviceData, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.fetchState">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.fetchState
+            <span class="apidocSignatureSpan">(entityID, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.request">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.request
+            <span class="apidocSignatureSpan">(method, path, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.sensor">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>sensor
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.switch">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>switch
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.toString">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.binary_sensor">module homebridge-homeassistant.binary_sensor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.binary_sensor.binary_sensor">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>binary_sensor
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.binary_sensor.HomeAssistantBinarySensorFactory">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.binary_sensor.</span>HomeAssistantBinarySensorFactory
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.cover">module homebridge-homeassistant.cover</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.cover.cover">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>cover
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.cover.HomeAssistantCoverFactory">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.cover.</span>HomeAssistantCoverFactory
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.device_tracker">module homebridge-homeassistant.device_tracker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.device_tracker.device_tracker">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>device_tracker
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.device_tracker.HomeAssistantDeviceTrackerFactory">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.device_tracker.</span>HomeAssistantDeviceTrackerFactory
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.fan">module homebridge-homeassistant.fan</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.fan.fan">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>fan
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.fan.HomeAssistantFan">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.fan.</span>HomeAssistantFan
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.light">module homebridge-homeassistant.light</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.light.light">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>light
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.light.HomeAssistantLight">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.light.</span>HomeAssistantLight
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.lock">module homebridge-homeassistant.lock</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.lock.lock">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>lock
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.lock.HomeAssistantLock">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.lock.</span>HomeAssistantLock
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.media_player">module homebridge-homeassistant.media_player</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.media_player.media_player">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>media_player
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.media_player.HomeAssistantMediaPlayer">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.media_player.</span>HomeAssistantMediaPlayer
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.platform">module homebridge-homeassistant.platform</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.platform">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform
+            <span class="apidocSignatureSpan">(log, config, api)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.platform.prototype">module homebridge-homeassistant.platform.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.accessories">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>accessories
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.callService">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>callService
+            <span class="apidocSignatureSpan">(domain, service, serviceData, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.fetchState">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>fetchState
+            <span class="apidocSignatureSpan">(entityID, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.request">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>request
+            <span class="apidocSignatureSpan">(method, path, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.accessories">module homebridge-homeassistant.platform.prototype.accessories</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.accessories.accessories">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>accessories
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.callService">module homebridge-homeassistant.platform.prototype.callService</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.callService.callService">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>callService
+            <span class="apidocSignatureSpan">(domain, service, serviceData, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.fetchState">module homebridge-homeassistant.platform.prototype.fetchState</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.fetchState.fetchState">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>fetchState
+            <span class="apidocSignatureSpan">(entityID, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.request">module homebridge-homeassistant.platform.prototype.request</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.platform.prototype.request.request">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>request
+            <span class="apidocSignatureSpan">(method, path, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.sensor">module homebridge-homeassistant.sensor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.sensor.sensor">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>sensor
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.sensor.HomeAssistantSensorFactory">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.sensor.</span>HomeAssistantSensorFactory
+            <span class="apidocSignatureSpan">(log, data, client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.switch">module homebridge-homeassistant.switch</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.switch.switch">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>switch
+            <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.switch.HomeAssistantSwitch">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.switch.</span>HomeAssistantSwitch
+            <span class="apidocSignatureSpan">(log, data, client, type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.homebridge-homeassistant.toString">module homebridge-homeassistant.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.homebridge-homeassistant.toString.toString">
+            function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant" id="apidoc.module.homebridge-homeassistant">module homebridge-homeassistant</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.homebridge-homeassistant" id="apidoc.element.homebridge-homeassistant.homebridge-homeassistant">
+        function <span class="apidocSignatureSpan"></span>homebridge-homeassistant
+        <span class="apidocSignatureSpan">(homebridge)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomebridgeHomeAssistant(homebridge) {
+  Service = homebridge.hap.Service;
+  Characteristic = homebridge.hap.Characteristic;
+
+<span class="apidocCodeCommentSpan">  /* eslint-disable global-require */
+</span>  HomeAssistantLight = require(&#x27;./accessories/light&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantSwitch = require(&#x27;./accessories/switch&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantLock = require(&#x27;./accessories/lock&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantMediaPlayer = require(&#x27;./accessories/media_player&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantFan = require(&#x27;./accessories/fan&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantCoverFactory = require(&#x27;./accessories/cover&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantSensorFactory = require(&#x27;./accessories/sensor&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantBinarySensorFactory = require(&#x27;./accessories/binary_sensor&#x27;)(Service, Characteristic, communicationError);
+  HomeAssistantDeviceTrackerFactory = require(&#x27;./accessories/device_tracker&#x27;)(Service, Characteristic, communicationError);
+  /* eslint-enable global-require */
+
+  homebridge.registerPlatform(&#x27;homebridge-homeassistant&#x27;, &#x27;HomeAssistant&#x27;, HomeAssistantPlatform, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.binary_sensor" id="apidoc.element.homebridge-homeassistant.binary_sensor">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>binary_sensor
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantBinarySensorPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantBinarySensorFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.cover" id="apidoc.element.homebridge-homeassistant.cover">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>cover
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantCoverPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantCoverFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.device_tracker" id="apidoc.element.homebridge-homeassistant.device_tracker">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>device_tracker
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantDeviceTrackerFactoryPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantDeviceTrackerFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.fan" id="apidoc.element.homebridge-homeassistant.fan">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>fan
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantFanPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantFan;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.light" id="apidoc.element.homebridge-homeassistant.light">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>light
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantLightPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantLight;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.lock" id="apidoc.element.homebridge-homeassistant.lock">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>lock
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantLockPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantLock;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.media_player" id="apidoc.element.homebridge-homeassistant.media_player">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>media_player
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantMediaPlayerPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantMediaPlayer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform" id="apidoc.element.homebridge-homeassistant.platform">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform
+        <span class="apidocSignatureSpan">(log, config, api)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantPlatform(log, config, api) {
+  // auth info
+  this.host = config.host;
+  this.password = config.password;
+  this.supportedTypes = config.supported_types || [&#x27;binary_sensor&#x27;, &#x27;cover&#x27;, &#x27;device_tracker&#x27;, &#x27;fan&#x27;, &#x27;input_boolean&#x27;, &#x27;light&#x27;, &#x27;
+lock&#x27;, &#x27;media_player&#x27;, &#x27;scene&#x27;, &#x27;sensor&#x27;, &#x27;switch&#x27;];
+  this.foundAccessories = [];
+  this.logging = config.logging !== undefined ? config.logging : true;
+
+  this.log = log;
+
+  if (api) {
+    // Save the API object as plugin needs to register new accessory via this object.
+    this.api = api;
+  }
+
+  const es = new EventSource(`${config.host}/api/stream?api_password=${encodeURIComponent(this.password)}`);
+  es.addEventListener(&#x27;message&#x27;, (e) =&#x3e; {
+    if (this.logging) {
+      this.log(`Received event: ${e.data}`);
+    }
+    if (e.data === &#x27;ping&#x27;) {
+      return;
+    }
+
+    const data = JSON.parse(e.data);
+    if (data.event_type !== &#x27;state_changed&#x27;) {
+      return;
+    }
+
+    const numAccessories = this.foundAccessories.length;
+    for (let i = 0; i &#x3c; numAccessories; i++) {
+      const accessory = this.foundAccessories[i];
+
+      if (accessory.entity_id === data.data.entity_id &#x26;&#x26; accessory.onEvent) {
+        accessory.onEvent(data.data.old_state, data.data.new_state);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.accessories" id="apidoc.element.homebridge-homeassistant.platform.prototype.accessories">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.accessories
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">accessories(callback) {
+  this.log(&#x27;Fetching HomeAssistant devices.&#x27;);
+
+  const that = this;
+
+  this.request(&#x27;GET&#x27;, &#x27;/states&#x27;, {}, (error, response, data) =&#x3e; {
+    if (error) {
+      that.log(`Failed getting devices: ${error}. Retrying...`);
+      setTimeout(() =&#x3e; { that.accessories(callback); }, 5000);
+      return;
+    }
+
+    for (let i = 0; i &#x3c; data.length; i++) {
+      const entity = data[i];
+      const entityType = entity.entity_id.split(&#x27;.&#x27;)[0];
+
+<span class="apidocCodeCommentSpan">      /* eslint-disable no-continue */
+</span>      // ignore devices that are not in the list of supported types
+      if (that.supportedTypes.indexOf(entityType) === -1) {
+        continue;
+      }
+
+      // ignore hidden devices
+      if (entity.attributes &#x26;&#x26; entity.attributes.hidden) {
+        continue;
+      }
+
+      // ignore homebridge hidden devices
+      if (entity.attributes &#x26;&#x26; entity.attributes.homebridge_hidden) {
+        continue;
+      }
+      /* eslint-enable no-continue */
+
+      // support providing custom names
+      if (entity.attributes &#x26;&#x26; entity.attributes.homebridge_name) {
+        entity.attributes.friendly_name = entity.attributes.homebridge_name;
+      }
+
+      let accessory = null;
+
+      if (entityType === &#x27;light&#x27;) {
+        accessory = new HomeAssistantLight(that.log, entity, that);
+      } else if (entityType === &#x27;switch&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that);
+      } else if (entityType === &#x27;lock&#x27;) {
+        accessory = new HomeAssistantLock(that.log, entity, that);
+      } else if (entityType === &#x27;garage_door&#x27;) {
+        that.log.error(&#x27;Garage_doors are no longer supported by homebridge-homeassistant. Please upgrade to a newer version of Home
+ Assistant to continue using this entity (with the new cover component).&#x27;);
+      } else if (entityType === &#x27;scene&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that, &#x27;scene&#x27;);
+      } else if (entityType === &#x27;rollershutter&#x27;) {
+        that.log.error(&#x27;Rollershutters are no longer supported by homebridge-homeassistant. Please upgrade to a newer version of
+ Home Assistant to continue using this entity (with the new cover component).&#x27;);
+      } else if (entityType === &#x27;input_boolean&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that, &#x27;input_boolean&#x27;);
+      } else if (entityType === &#x27;fan&#x27;) {
+        accessory = new HomeAssistantFan(that.log, entity, that);
+      } else if (entityType === &#x27;cover&#x27;) {
+        accessory = HomeAssistantCoverFactory(that.log, entity, that);
+      } else if (entityType === &#x27;sensor&#x27;) {
+        accessory = HomeAssistantSensorFactory(that.log, entity, that);
+      } else if (entityType === &#x27;device_tracker&#x27;) {
+        accessory = HomeAssistantDeviceTrackerFactory(that.log, entity, that);
+      } else if (entityType === &#x27;media_player&#x27; &#x26;&#x26; entity.attributes &#x26;&#x26; entity.attributes.supported_features) {
+        accessory = new HomeAssistantMediaPlayer(that.log, entity, that);
+      } else if (entityType === &#x27;binary_sensor&#x27; &#x26;&#x26; entity.attributes &#x26;&#x26; entity.attributes.device_class) {
+        accessory = HomeAssistantBinarySensorFactory(that.log, entity, that);
+      }
+
+      if (accessory) {
+        that.foundAccessories.push(accessory);
+      }
+    }
+
+    callback(that.foundAccessories);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.callService" id="apidoc.element.homebridge-homeassistant.platform.prototype.callService">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.callService
+        <span class="apidocSignatureSpan">(domain, service, serviceData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callService(domain, service, serviceData, callback) {
+  const options = {};
+  options.body = serviceData;
+
+  this.request(&#x27;POST&#x27;, `/services/${domain}/${service}`, options, (error, response, data) =&#x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.fetchState" id="apidoc.element.homebridge-homeassistant.platform.prototype.fetchState">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.fetchState
+        <span class="apidocSignatureSpan">(entityID, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchState(entityID, callback) {
+  this.request(&#x27;GET&#x27;, `/states/${entityID}`, {}, (error, response, data) =&#x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.request" id="apidoc.element.homebridge-homeassistant.platform.prototype.request">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform.prototype.request
+        <span class="apidocSignatureSpan">(method, path, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request(method, path, options, callback) {
+  const requestURL = `${this.host}/api${path}`;
+<span class="apidocCodeCommentSpan">  /* eslint-disable no-param-reassign */
+</span>  options = options || {};
+  options.query = options.query || {};
+  /* eslint-enable no-param-reassign */
+
+  const reqOpts = {
+    url: url.parse(requestURL),
+    method: method || &#x27;GET&#x27;,
+    qs: options.query,
+    body: JSON.stringify(options.body),
+    headers: {
+      Accept: &#x27;application/json&#x27;,
+      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
+      &#x27;x-ha-access&#x27;: this.password,
+    },
+  };
+
+  request(reqOpts, (error, response, body) =&#x3e; {
+    if (error) {
+      callback(error, response);
+      return;
+    }
+
+    if (response.statusCode === 401) {
+      callback(new Error(&#x27;You are not authenticated&#x27;), response);
+      return;
+    }
+
+    callback(error, response, JSON.parse(body));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.sensor" id="apidoc.element.homebridge-homeassistant.sensor">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>sensor
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantSensorPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantSensorFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.switch" id="apidoc.element.homebridge-homeassistant.switch">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>switch
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantSwitchPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantSwitch;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.toString" id="apidoc.element.homebridge-homeassistant.toString">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.binary_sensor" id="apidoc.module.homebridge-homeassistant.binary_sensor">module homebridge-homeassistant.binary_sensor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.binary_sensor.binary_sensor" id="apidoc.element.homebridge-homeassistant.binary_sensor.binary_sensor">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>binary_sensor
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantBinarySensorPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantBinarySensorFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.binary_sensor.HomeAssistantBinarySensorFactory" id="apidoc.element.homebridge-homeassistant.binary_sensor.HomeAssistantBinarySensorFactory">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.binary_sensor.</span>HomeAssistantBinarySensorFactory
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantBinarySensorFactory(log, data, client) {
+  if (!(data.attributes &#x26;&#x26; data.attributes.device_class)) {
+    return null;
+  }
+  switch (data.attributes.device_class) {
+    case &#x27;moisture&#x27;:
+      return new HomeAssistantBinarySensor(log, data, client,
+                                           Service.LeakSensor,
+                                           Characteristic.LeakDetected,
+                                           Characteristic.LeakDetected.LEAK_DETECTED,
+                                           Characteristic.LeakDetected.LEAK_NOT_DETECTED);
+    case &#x27;motion&#x27;:
+      return new HomeAssistantBinarySensor(log, data, client,
+                                           Service.MotionSensor,
+                                           Characteristic.MotionDetected,
+                                           true,
+                                           false);
+    case &#x27;occupancy&#x27;:
+      return new HomeAssistantBinarySensor(log, data, client,
+                                           Service.OccupancySensor,
+                                           Characteristic.OccupancyDetected,
+                                           Characteristic.OccupancyDetected.OCCUPANCY_DETECTED,
+                                           Characteristic.OccupancyDetected.OCCUPANCY_NOT_DETECTED);
+    case &#x27;opening&#x27;:
+      return new HomeAssistantBinarySensor(log, data, client,
+                                           Service.ContactSensor,
+                                           Characteristic.ContactSensorState,
+                                           Characteristic.ContactSensorState.CONTACT_NOT_DETECTED,
+                                           Characteristic.ContactSensorState.CONTACT_DETECTED);
+    case &#x27;smoke&#x27;:
+      return new HomeAssistantBinarySensor(log, data, client,
+                                           Service.SmokeSensor,
+                                           Characteristic.SmokeDetected,
+                                           Characteristic.SmokeDetected.SMOKE_DETECTED,
+                                           Characteristic.SmokeDetected.SMOKE_NOT_DETECTED);
+    default:
+      log.error(`&#x27;${data.entity_id}&#x27; has a device_class of &#x27;${data.attributes.device_class}&#x27; which is not supported by ` +
+                &#x27;homebridge-homeassistant. Supported classes are \&#x27;moisture\&#x27;, \&#x27;motion\&#x27;, \&#x27;occupancy\&#x27;, \&#x27;opening\&#x27; and \&#x27;smoke\&#x27;. &#x27; +
+                &#x27;See the README.md for more information.&#x27;);
+      return null;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.cover" id="apidoc.module.homebridge-homeassistant.cover">module homebridge-homeassistant.cover</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.cover.cover" id="apidoc.element.homebridge-homeassistant.cover.cover">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>cover
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantCoverPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantCoverFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.cover.HomeAssistantCoverFactory" id="apidoc.element.homebridge-homeassistant.cover.HomeAssistantCoverFactory">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.cover.</span>HomeAssistantCoverFactory
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantCoverFactory(log, data, client) {
+  if (!data.attributes) {
+    return null;
+  }
+
+  if (data.attributes.homebridge_cover_type === &#x27;garage_door&#x27;) {
+    return new HomeAssistantGarageDoor(log, data, client);
+  } else if (data.attributes.homebridge_cover_type === &#x27;rollershutter&#x27;) {
+    if (data.attributes.current_position !== undefined) {
+      return new HomeAssistantRollershutter(log, data, client);
+    }
+    return new HomeAssistantRollershutterBinary(log, data, client);
+  }
+  log.error(`&#x27;${data.entity_id}&#x27; is a cover but does not have a &#x27;homebridge_cover_type&#x27; property set. ` +
+            &#x27;You must set it to either \&#x27;rollershutter\&#x27; or \&#x27;garage_door\&#x27; in the customize section &#x27; +
+            &#x27;of your Home Assistant configuration. It will not be available to Homebridge until you do. &#x27; +
+            &#x27;See the README.md for more information. &#x27; +
+            &#x27;The attributes that were found are:&#x27;, JSON.stringify(data.attributes));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.device_tracker" id="apidoc.module.homebridge-homeassistant.device_tracker">module homebridge-homeassistant.device_tracker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.device_tracker.device_tracker" id="apidoc.element.homebridge-homeassistant.device_tracker.device_tracker">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>device_tracker
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantDeviceTrackerFactoryPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantDeviceTrackerFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.device_tracker.HomeAssistantDeviceTrackerFactory" id="apidoc.element.homebridge-homeassistant.device_tracker.HomeAssistantDeviceTrackerFactory">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.device_tracker.</span>HomeAssistantDeviceTrackerFactory
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantDeviceTrackerFactory(log, data, client) {
+  if (!(data.attributes)) {
+    return null;
+  }
+  return new HomeAssistantDeviceTracker(log, data, client,
+      Service.OccupancySensor,
+      Characteristic.OccupancyDetected,
+      Characteristic.OccupancyDetected.OCCUPANCY_DETECTED,
+      Characteristic.OccupancyDetected.OCCUPANCY_NOT_DETECTED);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.fan" id="apidoc.module.homebridge-homeassistant.fan">module homebridge-homeassistant.fan</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.fan.fan" id="apidoc.element.homebridge-homeassistant.fan.fan">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>fan
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantFanPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantFan;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.fan.HomeAssistantFan" id="apidoc.element.homebridge-homeassistant.fan.HomeAssistantFan">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.fan.</span>HomeAssistantFan
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantFan(log, data, client) {
+  // device info
+  this.domain = &#x27;fan&#x27;;
+  this.data = data;
+  this.entity_id = data.entity_id;
+  this.uuid_base = data.entity_id;
+  if (data.attributes &#x26;&#x26; data.attributes.friendly_name) {
+    this.name = data.attributes.friendly_name;
+  } else {
+    this.name = data.entity_id.split(&#x27;.&#x27;).pop().replace(/_/g, &#x27; &#x27;);
+  }
+
+  this.client = client;
+  this.log = log;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.light" id="apidoc.module.homebridge-homeassistant.light">module homebridge-homeassistant.light</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.light.light" id="apidoc.element.homebridge-homeassistant.light.light">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>light
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantLightPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantLight;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.light.HomeAssistantLight" id="apidoc.element.homebridge-homeassistant.light.HomeAssistantLight">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.light.</span>HomeAssistantLight
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantLight(log, data, client) {
+  // device info
+  this.domain = &#x27;light&#x27;;
+  this.data = data;
+  this.entity_id = data.entity_id;
+  this.uuid_base = data.entity_id;
+  if (data.attributes &#x26;&#x26; data.attributes.friendly_name) {
+    this.name = data.attributes.friendly_name;
+  } else {
+    this.name = data.entity_id.split(&#x27;.&#x27;).pop().replace(/_/g, &#x27; &#x27;);
+  }
+
+  this.client = client;
+  this.log = log;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.lock" id="apidoc.module.homebridge-homeassistant.lock">module homebridge-homeassistant.lock</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.lock.lock" id="apidoc.element.homebridge-homeassistant.lock.lock">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>lock
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantLockPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantLock;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.lock.HomeAssistantLock" id="apidoc.element.homebridge-homeassistant.lock.HomeAssistantLock">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.lock.</span>HomeAssistantLock
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantLock(log, data, client) {
+  // device info
+  this.domain = &#x27;lock&#x27;;
+  this.data = data;
+  this.entity_id = data.entity_id;
+  this.uuid_base = data.entity_id;
+  if (data.attributes &#x26;&#x26; data.attributes.friendly_name) {
+    this.name = data.attributes.friendly_name;
+  } else {
+    this.name = data.entity_id.split(&#x27;.&#x27;).pop().replace(/_/g, &#x27; &#x27;);
+  }
+
+  this.client = client;
+  this.log = log;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.media_player" id="apidoc.module.homebridge-homeassistant.media_player">module homebridge-homeassistant.media_player</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.media_player.media_player" id="apidoc.element.homebridge-homeassistant.media_player.media_player">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>media_player
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantMediaPlayerPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantMediaPlayer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.media_player.HomeAssistantMediaPlayer" id="apidoc.element.homebridge-homeassistant.media_player.HomeAssistantMediaPlayer">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.media_player.</span>HomeAssistantMediaPlayer
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantMediaPlayer(log, data, client) {
+<span class="apidocCodeCommentSpan">  /* eslint-disable no-unused-vars */
+</span>  const SUPPORT_PAUSE = 1;
+  const SUPPORT_SEEK = 2;
+  const SUPPORT_VOLUME_SET = 4;
+  const SUPPORT_VOLUME_MUTE = 8;
+  const SUPPORT_PREVIOUS_TRACK = 16;
+  const SUPPORT_NEXT_TRACK = 32;
+  const SUPPORT_YOUTUBE = 64;
+  const SUPPORT_TURN_ON = 128;
+  const SUPPORT_TURN_OFF = 256;
+  const SUPPORT_STOP = 4096;
+  /* eslint-enable no-unused-vars */
+
+  // device info
+  this.domain = &#x27;media_player&#x27;;
+  this.data = data;
+  this.entity_id = data.entity_id;
+  this.uuid_base = data.entity_id;
+  this.supportedFeatures = data.attributes.supported_features;
+
+  if (data.attributes &#x26;&#x26; data.attributes.friendly_name) {
+    this.name = data.attributes.friendly_name;
+  } else {
+    this.name = data.entity_id.split(&#x27;.&#x27;).pop().replace(/_/g, &#x27; &#x27;);
+  }
+
+  if ((this.supportedFeatures | SUPPORT_STOP) === this.supportedFeatures) {
+    this.onState = &#x27;playing&#x27;;
+    this.offState = &#x27;idle&#x27;;
+    this.onService = &#x27;media_play&#x27;;
+    this.offService = &#x27;media_stop&#x27;;
+  } else if ((this.supportedFeatures | SUPPORT_PAUSE) === this.supportedFeatures) {
+    this.onState = &#x27;playing&#x27;;
+    this.offState = &#x27;paused&#x27;;
+    this.onService = &#x27;media_play&#x27;;
+    this.offService = &#x27;media_pause&#x27;;
+  } else if ((this.supportedFeatures | SUPPORT_TURN_ON) === this.supportedFeatures &#x26;&#x26;
+             (this.supportedFeatures | SUPPORT_TURN_OFF) === this.supportedFeatures) {
+    this.onState = &#x27;on&#x27;;
+    this.offState = &#x27;off&#x27;;
+    this.onService = &#x27;turn_on&#x27;;
+    this.offService = &#x27;turn_off&#x27;;
+  }
+
+  this.client = client;
+  this.log = log;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.platform" id="apidoc.module.homebridge-homeassistant.platform">module homebridge-homeassistant.platform</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.platform" id="apidoc.element.homebridge-homeassistant.platform.platform">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>platform
+        <span class="apidocSignatureSpan">(log, config, api)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantPlatform(log, config, api) {
+  // auth info
+  this.host = config.host;
+  this.password = config.password;
+  this.supportedTypes = config.supported_types || [&#x27;binary_sensor&#x27;, &#x27;cover&#x27;, &#x27;device_tracker&#x27;, &#x27;fan&#x27;, &#x27;input_boolean&#x27;, &#x27;light&#x27;, &#x27;
+lock&#x27;, &#x27;media_player&#x27;, &#x27;scene&#x27;, &#x27;sensor&#x27;, &#x27;switch&#x27;];
+  this.foundAccessories = [];
+  this.logging = config.logging !== undefined ? config.logging : true;
+
+  this.log = log;
+
+  if (api) {
+    // Save the API object as plugin needs to register new accessory via this object.
+    this.api = api;
+  }
+
+  const es = new EventSource(`${config.host}/api/stream?api_password=${encodeURIComponent(this.password)}`);
+  es.addEventListener(&#x27;message&#x27;, (e) =&#x3e; {
+    if (this.logging) {
+      this.log(`Received event: ${e.data}`);
+    }
+    if (e.data === &#x27;ping&#x27;) {
+      return;
+    }
+
+    const data = JSON.parse(e.data);
+    if (data.event_type !== &#x27;state_changed&#x27;) {
+      return;
+    }
+
+    const numAccessories = this.foundAccessories.length;
+    for (let i = 0; i &#x3c; numAccessories; i++) {
+      const accessory = this.foundAccessories[i];
+
+      if (accessory.entity_id === data.data.entity_id &#x26;&#x26; accessory.onEvent) {
+        accessory.onEvent(data.data.old_state, data.data.new_state);
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.platform.prototype" id="apidoc.module.homebridge-homeassistant.platform.prototype">module homebridge-homeassistant.platform.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.accessories" id="apidoc.element.homebridge-homeassistant.platform.prototype.accessories">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>accessories
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">accessories(callback) {
+  this.log(&#x27;Fetching HomeAssistant devices.&#x27;);
+
+  const that = this;
+
+  this.request(&#x27;GET&#x27;, &#x27;/states&#x27;, {}, (error, response, data) =&#x3e; {
+    if (error) {
+      that.log(`Failed getting devices: ${error}. Retrying...`);
+      setTimeout(() =&#x3e; { that.accessories(callback); }, 5000);
+      return;
+    }
+
+    for (let i = 0; i &#x3c; data.length; i++) {
+      const entity = data[i];
+      const entityType = entity.entity_id.split(&#x27;.&#x27;)[0];
+
+<span class="apidocCodeCommentSpan">      /* eslint-disable no-continue */
+</span>      // ignore devices that are not in the list of supported types
+      if (that.supportedTypes.indexOf(entityType) === -1) {
+        continue;
+      }
+
+      // ignore hidden devices
+      if (entity.attributes &#x26;&#x26; entity.attributes.hidden) {
+        continue;
+      }
+
+      // ignore homebridge hidden devices
+      if (entity.attributes &#x26;&#x26; entity.attributes.homebridge_hidden) {
+        continue;
+      }
+      /* eslint-enable no-continue */
+
+      // support providing custom names
+      if (entity.attributes &#x26;&#x26; entity.attributes.homebridge_name) {
+        entity.attributes.friendly_name = entity.attributes.homebridge_name;
+      }
+
+      let accessory = null;
+
+      if (entityType === &#x27;light&#x27;) {
+        accessory = new HomeAssistantLight(that.log, entity, that);
+      } else if (entityType === &#x27;switch&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that);
+      } else if (entityType === &#x27;lock&#x27;) {
+        accessory = new HomeAssistantLock(that.log, entity, that);
+      } else if (entityType === &#x27;garage_door&#x27;) {
+        that.log.error(&#x27;Garage_doors are no longer supported by homebridge-homeassistant. Please upgrade to a newer version of Home
+ Assistant to continue using this entity (with the new cover component).&#x27;);
+      } else if (entityType === &#x27;scene&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that, &#x27;scene&#x27;);
+      } else if (entityType === &#x27;rollershutter&#x27;) {
+        that.log.error(&#x27;Rollershutters are no longer supported by homebridge-homeassistant. Please upgrade to a newer version of
+ Home Assistant to continue using this entity (with the new cover component).&#x27;);
+      } else if (entityType === &#x27;input_boolean&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that, &#x27;input_boolean&#x27;);
+      } else if (entityType === &#x27;fan&#x27;) {
+        accessory = new HomeAssistantFan(that.log, entity, that);
+      } else if (entityType === &#x27;cover&#x27;) {
+        accessory = HomeAssistantCoverFactory(that.log, entity, that);
+      } else if (entityType === &#x27;sensor&#x27;) {
+        accessory = HomeAssistantSensorFactory(that.log, entity, that);
+      } else if (entityType === &#x27;device_tracker&#x27;) {
+        accessory = HomeAssistantDeviceTrackerFactory(that.log, entity, that);
+      } else if (entityType === &#x27;media_player&#x27; &#x26;&#x26; entity.attributes &#x26;&#x26; entity.attributes.supported_features) {
+        accessory = new HomeAssistantMediaPlayer(that.log, entity, that);
+      } else if (entityType === &#x27;binary_sensor&#x27; &#x26;&#x26; entity.attributes &#x26;&#x26; entity.attributes.device_class) {
+        accessory = HomeAssistantBinarySensorFactory(that.log, entity, that);
+      }
+
+      if (accessory) {
+        that.foundAccessories.push(accessory);
+      }
+    }
+
+    callback(that.foundAccessories);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.log(&#x27;Fetching HomeAssistant devices.&#x27;);
+
+    const that = this;
+
+    this.request(&#x27;GET&#x27;, &#x27;/states&#x27;, {}, (error, response, data) =&#x3e; {
+if (error) {
+  that.log(`Failed getting devices: ${error}. Retrying...`);
+  setTimeout(() =&#x3e; { that.<span class="apidocCodeKeywordSpan">accessories</span>(callback); }, 5000);
+  return;
+}
+
+for (let i = 0; i &#x3c; data.length; i++) {
+  const entity = data[i];
+  const entityType = entity.entity_id.split(&#x27;.&#x27;)[0];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.callService" id="apidoc.element.homebridge-homeassistant.platform.prototype.callService">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>callService
+        <span class="apidocSignatureSpan">(domain, service, serviceData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callService(domain, service, serviceData, callback) {
+  const options = {};
+  options.body = serviceData;
+
+  this.request(&#x27;POST&#x27;, `/services/${domain}/${service}`, options, (error, response, data) =&#x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+doChangeState(service, callback) {
+  const serviceData = {
+    entity_id: this.entity_id,
+  };
+
+  this.log(`Calling service ${service} on ${this.name}`);
+
+  this.client.<span class="apidocCodeKeywordSpan">callService</span>(this.domain, service, serviceData, (data) =&#x3e; {
+    if (data) {
+      callback();
+    } else {
+      callback(communicationError);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.fetchState" id="apidoc.element.homebridge-homeassistant.platform.prototype.fetchState">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>fetchState
+        <span class="apidocSignatureSpan">(entityID, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchState(entityID, callback) {
+  this.request(&#x27;GET&#x27;, `/states/${entityID}`, {}, (error, response, data) =&#x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+identify(callback) {
+  this.log(`identifying: ${this.name}`);
+  callback();
+}
+getState(callback) {
+  this.log(`fetching state for: ${this.name}`);
+  this.client.<span class="apidocCodeKeywordSpan">fetchState</span>(this.entity_id, (data) =&#x3e; {
+    if (data) {
+      callback(null, data.state === &#x27;on&#x27; ? this.onValue : this.offValue);
+    } else {
+      callback(communicationError);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.request" id="apidoc.element.homebridge-homeassistant.platform.prototype.request">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>request
+        <span class="apidocSignatureSpan">(method, path, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request(method, path, options, callback) {
+  const requestURL = `${this.host}/api${path}`;
+<span class="apidocCodeCommentSpan">  /* eslint-disable no-param-reassign */
+</span>  options = options || {};
+  options.query = options.query || {};
+  /* eslint-enable no-param-reassign */
+
+  const reqOpts = {
+    url: url.parse(requestURL),
+    method: method || &#x27;GET&#x27;,
+    qs: options.query,
+    body: JSON.stringify(options.body),
+    headers: {
+      Accept: &#x27;application/json&#x27;,
+      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
+      &#x27;x-ha-access&#x27;: this.password,
+    },
+  };
+
+  request(reqOpts, (error, response, body) =&#x3e; {
+    if (error) {
+      callback(error, response);
+      return;
+    }
+
+    if (response.statusCode === 401) {
+      callback(new Error(&#x27;You are not authenticated&#x27;), response);
+      return;
+    }
+
+    callback(error, response, JSON.parse(body));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return;
+    }
+
+    callback(error, response, JSON.parse(body));
+  });
+},
+fetchState(entityID, callback) {
+  this.<span class="apidocCodeKeywordSpan">request</span>(&#x27;GET&#x27;, `/states/${entityID}`, {}, (error, response, data) =&#
+x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.accessories" id="apidoc.module.homebridge-homeassistant.platform.prototype.accessories">module homebridge-homeassistant.platform.prototype.accessories</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.accessories.accessories" id="apidoc.element.homebridge-homeassistant.platform.prototype.accessories.accessories">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>accessories
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">accessories(callback) {
+  this.log(&#x27;Fetching HomeAssistant devices.&#x27;);
+
+  const that = this;
+
+  this.request(&#x27;GET&#x27;, &#x27;/states&#x27;, {}, (error, response, data) =&#x3e; {
+    if (error) {
+      that.log(`Failed getting devices: ${error}. Retrying...`);
+      setTimeout(() =&#x3e; { that.accessories(callback); }, 5000);
+      return;
+    }
+
+    for (let i = 0; i &#x3c; data.length; i++) {
+      const entity = data[i];
+      const entityType = entity.entity_id.split(&#x27;.&#x27;)[0];
+
+<span class="apidocCodeCommentSpan">      /* eslint-disable no-continue */
+</span>      // ignore devices that are not in the list of supported types
+      if (that.supportedTypes.indexOf(entityType) === -1) {
+        continue;
+      }
+
+      // ignore hidden devices
+      if (entity.attributes &#x26;&#x26; entity.attributes.hidden) {
+        continue;
+      }
+
+      // ignore homebridge hidden devices
+      if (entity.attributes &#x26;&#x26; entity.attributes.homebridge_hidden) {
+        continue;
+      }
+      /* eslint-enable no-continue */
+
+      // support providing custom names
+      if (entity.attributes &#x26;&#x26; entity.attributes.homebridge_name) {
+        entity.attributes.friendly_name = entity.attributes.homebridge_name;
+      }
+
+      let accessory = null;
+
+      if (entityType === &#x27;light&#x27;) {
+        accessory = new HomeAssistantLight(that.log, entity, that);
+      } else if (entityType === &#x27;switch&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that);
+      } else if (entityType === &#x27;lock&#x27;) {
+        accessory = new HomeAssistantLock(that.log, entity, that);
+      } else if (entityType === &#x27;garage_door&#x27;) {
+        that.log.error(&#x27;Garage_doors are no longer supported by homebridge-homeassistant. Please upgrade to a newer version of Home
+ Assistant to continue using this entity (with the new cover component).&#x27;);
+      } else if (entityType === &#x27;scene&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that, &#x27;scene&#x27;);
+      } else if (entityType === &#x27;rollershutter&#x27;) {
+        that.log.error(&#x27;Rollershutters are no longer supported by homebridge-homeassistant. Please upgrade to a newer version of
+ Home Assistant to continue using this entity (with the new cover component).&#x27;);
+      } else if (entityType === &#x27;input_boolean&#x27;) {
+        accessory = new HomeAssistantSwitch(that.log, entity, that, &#x27;input_boolean&#x27;);
+      } else if (entityType === &#x27;fan&#x27;) {
+        accessory = new HomeAssistantFan(that.log, entity, that);
+      } else if (entityType === &#x27;cover&#x27;) {
+        accessory = HomeAssistantCoverFactory(that.log, entity, that);
+      } else if (entityType === &#x27;sensor&#x27;) {
+        accessory = HomeAssistantSensorFactory(that.log, entity, that);
+      } else if (entityType === &#x27;device_tracker&#x27;) {
+        accessory = HomeAssistantDeviceTrackerFactory(that.log, entity, that);
+      } else if (entityType === &#x27;media_player&#x27; &#x26;&#x26; entity.attributes &#x26;&#x26; entity.attributes.supported_features) {
+        accessory = new HomeAssistantMediaPlayer(that.log, entity, that);
+      } else if (entityType === &#x27;binary_sensor&#x27; &#x26;&#x26; entity.attributes &#x26;&#x26; entity.attributes.device_class) {
+        accessory = HomeAssistantBinarySensorFactory(that.log, entity, that);
+      }
+
+      if (accessory) {
+        that.foundAccessories.push(accessory);
+      }
+    }
+
+    callback(that.foundAccessories);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    this.log(&#x27;Fetching HomeAssistant devices.&#x27;);
+
+    const that = this;
+
+    this.request(&#x27;GET&#x27;, &#x27;/states&#x27;, {}, (error, response, data) =&#x3e; {
+if (error) {
+  that.log(`Failed getting devices: ${error}. Retrying...`);
+  setTimeout(() =&#x3e; { that.<span class="apidocCodeKeywordSpan">accessories</span>(callback); }, 5000);
+  return;
+}
+
+for (let i = 0; i &#x3c; data.length; i++) {
+  const entity = data[i];
+  const entityType = entity.entity_id.split(&#x27;.&#x27;)[0];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.callService" id="apidoc.module.homebridge-homeassistant.platform.prototype.callService">module homebridge-homeassistant.platform.prototype.callService</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.callService.callService" id="apidoc.element.homebridge-homeassistant.platform.prototype.callService.callService">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>callService
+        <span class="apidocSignatureSpan">(domain, service, serviceData, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callService(domain, service, serviceData, callback) {
+  const options = {};
+  options.body = serviceData;
+
+  this.request(&#x27;POST&#x27;, `/services/${domain}/${service}`, options, (error, response, data) =&#x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+doChangeState(service, callback) {
+  const serviceData = {
+    entity_id: this.entity_id,
+  };
+
+  this.log(`Calling service ${service} on ${this.name}`);
+
+  this.client.<span class="apidocCodeKeywordSpan">callService</span>(this.domain, service, serviceData, (data) =&#x3e; {
+    if (data) {
+      callback();
+    } else {
+      callback(communicationError);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.fetchState" id="apidoc.module.homebridge-homeassistant.platform.prototype.fetchState">module homebridge-homeassistant.platform.prototype.fetchState</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.fetchState.fetchState" id="apidoc.element.homebridge-homeassistant.platform.prototype.fetchState.fetchState">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>fetchState
+        <span class="apidocSignatureSpan">(entityID, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchState(entityID, callback) {
+  this.request(&#x27;GET&#x27;, `/states/${entityID}`, {}, (error, response, data) =&#x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+identify(callback) {
+  this.log(`identifying: ${this.name}`);
+  callback();
+}
+getState(callback) {
+  this.log(`fetching state for: ${this.name}`);
+  this.client.<span class="apidocCodeKeywordSpan">fetchState</span>(this.entity_id, (data) =&#x3e; {
+    if (data) {
+      callback(null, data.state === &#x27;on&#x27; ? this.onValue : this.offValue);
+    } else {
+      callback(communicationError);
+    }
+  });
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.platform.prototype.request" id="apidoc.module.homebridge-homeassistant.platform.prototype.request">module homebridge-homeassistant.platform.prototype.request</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.platform.prototype.request.request" id="apidoc.element.homebridge-homeassistant.platform.prototype.request.request">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.platform.prototype.</span>request
+        <span class="apidocSignatureSpan">(method, path, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">request(method, path, options, callback) {
+  const requestURL = `${this.host}/api${path}`;
+<span class="apidocCodeCommentSpan">  /* eslint-disable no-param-reassign */
+</span>  options = options || {};
+  options.query = options.query || {};
+  /* eslint-enable no-param-reassign */
+
+  const reqOpts = {
+    url: url.parse(requestURL),
+    method: method || &#x27;GET&#x27;,
+    qs: options.query,
+    body: JSON.stringify(options.body),
+    headers: {
+      Accept: &#x27;application/json&#x27;,
+      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,
+      &#x27;x-ha-access&#x27;: this.password,
+    },
+  };
+
+  request(reqOpts, (error, response, body) =&#x3e; {
+    if (error) {
+      callback(error, response);
+      return;
+    }
+
+    if (response.statusCode === 401) {
+      callback(new Error(&#x27;You are not authenticated&#x27;), response);
+      return;
+    }
+
+    callback(error, response, JSON.parse(body));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return;
+    }
+
+    callback(error, response, JSON.parse(body));
+  });
+},
+fetchState(entityID, callback) {
+  this.<span class="apidocCodeKeywordSpan">request</span>(&#x27;GET&#x27;, `/states/${entityID}`, {}, (error, response, data) =&#
+x3e; {
+    if (error) {
+      callback(null);
+    } else {
+      callback(data);
+    }
+  });
+},
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.sensor" id="apidoc.module.homebridge-homeassistant.sensor">module homebridge-homeassistant.sensor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.sensor.sensor" id="apidoc.element.homebridge-homeassistant.sensor.sensor">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>sensor
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantSensorPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantSensorFactory;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.sensor.HomeAssistantSensorFactory" id="apidoc.element.homebridge-homeassistant.sensor.HomeAssistantSensorFactory">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.sensor.</span>HomeAssistantSensorFactory
+        <span class="apidocSignatureSpan">(log, data, client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantSensorFactory(log, data, client) {
+  if (!data.attributes) {
+    return null;
+  }
+  let service;
+  let characteristic;
+  let transformData;
+  if (data.attributes.unit_of_measurement === &#x27;°C&#x27; || data.attributes.unit_of_measurement === &#x27;°F&#x27;) {
+    service = Service.TemperatureSensor;
+    characteristic = Characteristic.CurrentTemperature;
+    transformData = function transformData(dataToTransform) { // eslint-disable-line no-shadow
+      let value = parseFloat(dataToTransform.state);
+      // HomeKit only works with Celsius internally
+      if (dataToTransform.attributes.unit_of_measurement === &#x27;°F&#x27;) {
+        value = (value - 32) / 1.8;
+      }
+      return value;
+    };
+  } else if (data.attributes.unit_of_measurement === &#x27;%&#x27; &#x26;&#x26; (data.entity_id.includes(&#x27;humidity&#x27;) || data.attributes.homebridge_sensor_type
+ === &#x27;humidity&#x27;)) {
+    service = Service.HumiditySensor;
+    characteristic = Characteristic.CurrentRelativeHumidity;
+  } else if (data.attributes.unit_of_measurement === &#x27;lux&#x27;) {
+    service = Service.LightSensor;
+    characteristic = Characteristic.CurrentAmbientLightLevel;
+    transformData = function transformData(dataToTransform) { // eslint-disable-line no-shadow
+      return Math.max(0.0001, parseFloat(dataToTransform.state));
+    };
+  } else if (data.attributes.unit_of_measurement === &#x27;ppm&#x27; &#x26;&#x26; (data.entity_id.includes(&#x27;co2&#x27;) || data.attributes.homebridge_sensor_type
+ === &#x27;co2&#x27;)) {
+    service = Service.CarbonDioxideSensor;
+    characteristic = Characteristic.CarbonDioxideLevel;
+  } else {
+    return null;
+  }
+
+  return new HomeAssistantSensor(log, data, client, service, characteristic, transformData);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.switch" id="apidoc.module.homebridge-homeassistant.switch">module homebridge-homeassistant.switch</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.switch.switch" id="apidoc.element.homebridge-homeassistant.switch.switch">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>switch
+        <span class="apidocSignatureSpan">(oService, oCharacteristic, oCommunicationError)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantSwitchPlatform(oService, oCharacteristic, oCommunicationError) {
+  Service = oService;
+  Characteristic = oCharacteristic;
+  communicationError = oCommunicationError;
+
+  return HomeAssistantSwitch;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.switch.HomeAssistantSwitch" id="apidoc.element.homebridge-homeassistant.switch.HomeAssistantSwitch">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.switch.</span>HomeAssistantSwitch
+        <span class="apidocSignatureSpan">(log, data, client, type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HomeAssistantSwitch(log, data, client, type) {
+  // device info
+  this.domain = type || &#x27;switch&#x27;;
+  this.data = data;
+  this.entity_id = data.entity_id;
+  this.uuid_base = data.entity_id;
+  if (data.attributes &#x26;&#x26; data.attributes.friendly_name) {
+    this.name = data.attributes.friendly_name;
+  } else {
+    this.name = data.entity_id.split(&#x27;.&#x27;).pop().replace(/_/g, &#x27; &#x27;);
+  }
+
+  this.client = client;
+  this.log = log;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.homebridge-homeassistant.toString" id="apidoc.module.homebridge-homeassistant.toString">module homebridge-homeassistant.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.homebridge-homeassistant.toString.toString" id="apidoc.element.homebridge-homeassistant.toString.toString">
+        function <span class="apidocSignatureSpan">homebridge-homeassistant.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
